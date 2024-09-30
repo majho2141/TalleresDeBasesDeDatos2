@@ -21,15 +21,6 @@ public  class Ejemplo {
 
             // Crear un CallableStatement
             CallableStatement stmt = conn.prepareCall("call taller9.poblar()");
-            CallableStatement stmt1 = conn.prepareCall("{ call taller9.obtener_nomina_empleado(?,?,?)}");
-            stmt1.setString(1, "1");
-            stmt1.setInt(2, 10);
-            stmt1.setInt(3, 0);
-            
-            ResultSet resultado = stmt1.executeQuery();
-            while (resultado.next()){
-                
-            }
             
             // Ejecutar el procedimiento almacenado
             stmt.execute();
