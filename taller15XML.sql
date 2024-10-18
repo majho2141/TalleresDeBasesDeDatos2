@@ -7,7 +7,7 @@ CREATE OR REPLACE PROCEDURE "tallerxml".guardar_libro(p_isbn VARCHAR, p_titulo V
 LANGUAGE plpgsql
 AS $$
 BEGIN
-    IF NOT EXISTS (SELECT 1 FROM libros WHERE isbn = p_isbn AND descripcion::TEXT LIKE '%' || p_titulo || '%') THEN
+    IF NOT EXISTS (SELECT 1 FROM libros WHERE isbn = p_isbn OR descripcion::TEXT LIKE '%' || p_titulo || '%') THEN
         INSERT INTO libros (isbn, descripcion) VALUES (p_isbn, XMLPARSE(CONTENT '<libro><titulo>' || p_titulo || '</titulo><autor>' || p_autor || '</autor><anio>'|| p_anio ||'</anio></libro>'));
     ELSE
         RAISE NOTICE 'El ISBN o el título del libro ya existe en la tabla.';
