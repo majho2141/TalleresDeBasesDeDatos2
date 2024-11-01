@@ -1,0 +1,187 @@
+[
+    {
+        "ProductoID": 1,
+        "Nombre": "Camiseta",
+        "Descripcion": "Camiseta de algodón",
+        "Precio": 20,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Ropa"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 1,
+                "Texto": "Muy cómoda",
+                "Cliente": "Juan"
+            },
+            {
+                "ComentarioID": 2,
+                "Texto": "Buena calidad",
+                "Cliente": "Maria"
+            }
+        ]
+    },
+    {
+        "ProductoID": 2,
+        "Nombre": "Pantalón",
+        "Descripcion": "Pantalón de mezclilla",
+        "Precio": 35,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Ropa"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 3,
+                "Texto": "Resistente y cómodo",
+                "Cliente": "Ana"
+            }
+        ]
+    },
+    {
+        "ProductoID": 3,
+        "Nombre": "Zapatos",
+        "Descripcion": "Zapatos de cuero",
+        "Precio": 50,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Ropa"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 4,
+                "Texto": "Excelente calidad",
+                "Cliente": "Carlos"
+            },
+            {
+                "ComentarioID": 5,
+                "Texto": "Muy elegantes",
+                "Cliente": "Luis"
+            }
+        ]
+    },
+    {
+        "ProductoID": 4,
+        "Nombre": "Reloj",
+        "Descripcion": "Reloj de pulsera",
+        "Precio": 150,
+        "Categoria": {
+            "CategoriaID": 2,
+            "NombreCategoria": "Accesorios"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 6,
+                "Texto": "Perfecto para regalar",
+                "Cliente": "Pedro"
+            }
+        ]
+    },
+    {
+        "ProductoID": 5,
+        "Nombre": "Bolso",
+        "Descripcion": "Bolso de mano",
+        "Precio": 80,
+        "Categoria": {
+            "CategoriaID": 2,
+            "NombreCategoria": "Accesorios"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 6,
+        "Nombre": "Bufanda",
+        "Descripcion": "Bufanda de lana",
+        "Precio": 25,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Ropa"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 7,
+                "Texto": "Muy abrigadora",
+                "Cliente": "Elena"
+            }
+        ]
+    },
+    {
+        "ProductoID": 7,
+        "Nombre": "Sombrero",
+        "Descripcion": "Sombrero de paja",
+        "Precio": 15,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Ropa"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 8,
+        "Nombre": "Gafas de sol",
+        "Descripcion": "Gafas polarizadas",
+        "Precio": 45,
+        "Categoria": {
+            "CategoriaID": 2,
+            "NombreCategoria": "Accesorios"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 8,
+                "Texto": "Protege bien del sol",
+                "Cliente": "Andrea"
+            }
+        ]
+    },
+    {
+        "ProductoID": 9,
+        "Nombre": "Gorra",
+        "Descripcion": "Gorra deportiva",
+        "Precio": 18,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Ropa"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 10,
+        "Nombre": "Cinturón",
+        "Descripcion": "Cinturón de cuero",
+        "Precio": 40,
+        "Categoria": {
+            "CategoriaID": 2,
+            "NombreCategoria": "Accesorios"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 9,
+                "Texto": "Muy duradero",
+                "Cliente": "Miguel"
+            }
+        ]
+    }
+]
+
+db.Productos.find(
+  {},
+{
+    "Categoria": 0,
+    "Comentarios": 0
+}
+)
+
+
+db.Productos.find(
+  {},
+{
+    "Comentarios": 0
+}
+)
+
+db.Productos.find(
+  {},
+{
+    "Categoria": 0
+}
+)
